@@ -1,0 +1,53 @@
+
+@import url('/css/layouts/reset.css');
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap');
+	
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+@font-face {
+	font-family: '777Littlebear';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/777Littlebear.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+img {
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.flex-ar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container {
+	width: 80%;
+	margin: auto;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-evenly {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layouts/layout">
+
+<!-- css -->
+<th:block layout:fragment="css">
+	<link rel="stylesheet" href="/css/contents/prod/prodList.css">
+</th:block>
+
+<!-- js -->
+<th:block layout:fragment="js">
+	<script src="/js/contents/prod/prodList.js"></script>
+</th:block>
+
+<!-- content -->
+<main id="main" layout:fragment="content">
+
+    <section id="prod-list">
+        <h1 class="hidden">prod-list</h1>
+        <nav id="prod-list-menu">
+            <h1 class="hidden">prod-list-menu</h1>
+            <ul class="flex-ar">
+                <li><a href="">전체</a></li>
+				<li th:each="prodMenu:${prodMenu}">
+					<a th:href="${prodMenu.option}" th:text="${prodMenu.option}	"  th:value="${prodMenu.code}"></a>
+				</li>
+                <li id="itemSearchNm">
+                    <input type="text" name="" id="">
+                    <i class="fas fa-search"></i>
+                </li>
+            </ul>
+        </nav>
+        <article id="prod-list-item">
+            <h1 class="hidden">prod-list-item</h1>
+            <div th:each="prodList:${prodList}" class="item-container">
+                <div id="list-item-img">
+                    <a th:href="${prodList.prodId}">
+                        <img th:src="${prodList.imgRoute}">
+                    </a>
+                </div>
+                <div id="list-item-name">
+                    <span th:text="${prodList.prodNm}"></span>
+                </div>
+            </div>
+        </article>
+		<div id="pager">
+			<ul class="flex-ar">
+				<li><a href=""><i class="fas fa-arrow-alt-circle-left"></i></a>
+				</li>
+				<li><a href="">1</a></li>
+				<li><a href=""><i class="fas fa-arrow-alt-circle-right"></i></a>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+    <section id="prod-ranking">
+        <h1 class="hidden">prod-ranking</h1>
+        <div>
+            <span id="ranking-title">Ranking</span>
+        </div>
+        <div>
+            <span class="ranking-info">2019년 4분기 판매량</span>
+            <span class="ranking-info">/</span>
+            <span class="ranking-info">FIS 식품산업통계정보</span>
+        </div>
+        <article id="prod-ranking-item">
+            <h1 class="hidden">prod-ranking-item</h1>
+            <ul th:each="rankingList:${rankingList}" class="flex-ar">
+                <li><span th:text="${rankingListStat.index+1}"></span></li>
+                <li><span>(+?)</span></li>
+                <li><a href=""><img id="ranking-item-img" th:src="${rankingList.imgRoute}"></a></li>
+                <li><span id="totalSales" th:text="${rankingList.totalSales}"></span></li>
+                <li><img id="ranking-logo-img" th:src="${rankingList.mfrLogo}"></li>
+            </ul>
+        </article>
+    </section>
+
+</main>
+
+</html>

@@ -1,0 +1,81 @@
+#main {
+	background: #282c34;
+	margin: 100px;
+}
+
+li {
+	margin: 50px;
+}
+
+#login-menu img {
+	height: 35px;
+	width: 150px;
+}
+
+.hexagon-wrapper {
+	display: flex;
+	width: 200px;
+	height: 200px;
+	cursor: pointer;
+}
+
+.hexagon {
+	background: #282c34;
+	color: white;
+	position: relative;
+	width: 45%;
+	height: 80%;
+	margin: auto;
+	transition: 0.5s;
+	z-index: 0;
+}
+
+.hexagon .text {
+	color: white;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.hexagon:before, .hexagon:after {
+	background: #282c34;
+	position: absolute;
+	content: "";
+	height: 100%;
+	width: 100%;
+	border-radius: 0;
+	transform-origin: center;
+	z-index: -1;
+}
+
+.hexagon:before {
+	transform: rotateZ(60deg);
+}
+
+.hexagon:after {
+	transform: rotateZ(-60deg);
+}
+
+.hexagon:hover {
+	border-radius: 50px;
+	transition: 0.5s;
+	background-color: white;
+	/* background: linear-gradient(-180deg, #fda3b2, #e37682); */
+}
+
+.hexagon:hover:before {
+	border-radius: 50px;
+	transition: 0.5s;
+	background-color: white;
+	/* background: linear-gradient(-180deg, #fda3b2, #e37682); */
+}
+
+.hexagon:hover:after {
+	border-radius: 50px;
+	transition: 0.5s;
+	background-color: white;
+	/* background: linear-gradient(-180deg, #fda3b2, #e37682); */
+}
+
+.hexagon:hover .text {
+	color: #20232a;
+}

@@ -1,0 +1,11 @@
+@import url("/css/fragments/header.css");
+@import url("/css/fragments/aside.css");
+@import url("/css/fragments/footer.css");
+
+#body {
+	display: flex;
+}
+
+#main {
+    margin: 50px;	
+}

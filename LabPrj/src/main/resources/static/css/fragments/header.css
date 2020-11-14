@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+#header {
+	font-size: 1.5em;
+	font-weight: bold;
+	font-family: 'Orbitron', sans-serif;
+	padding: 40px 0px;
+	border-bottom: solid #20232a;
+}
+
+.title-main {
+	font-size: 2em;
+	font-weight: bold;
+	color: #20232a;
+}
+
+#header-menu .mypage {
+	color: white;
+	font-size: 12px;
+	display: block;
+	padding: 7.5px 12.5px;
+	margin: 2.5px;
+}
+
+#header-menu .mypage:hover {
+	background: linear-gradient(-180deg, #fda3b2, #e37682);
+	color: #292929;
+	border-radius: 20px;
+	transition: 0.5s;
+}
